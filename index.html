@@ -13,7 +13,13 @@ body{background:#000;overflow:hidden;width:100vw;height:100vh;touch-action:none;
 
 /* ── PICKER ─────────────────────────────────────────── */
 #picker{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 88%,#1a4d20 0%,#07090d 62%);display:flex;flex-direction:column;z-index:100}
-#pk-head{flex-shrink:0;padding:52px 0 20px;text-align:center;border-bottom:1px solid rgba(255,255,255,.07)}
+#pk-head{flex-shrink:0;padding:36px 0 20px;text-align:center;border-bottom:1px solid rgba(255,255,255,.07)}
+#pk-diamond{width:64px;height:64px;position:relative;transform:rotate(45deg);margin:0 auto 22px}
+.pb{position:absolute;width:18px;height:18px;border:2px solid rgba(241,196,15,.65);background:rgba(241,196,15,.1);border-radius:2px}
+.pb-home{bottom:0;left:50%;transform:translateX(-50%)}
+.pb-first{right:0;top:50%;transform:translateY(-50%)}
+.pb-second{top:0;left:50%;transform:translateX(-50%)}
+.pb-third{left:0;top:50%;transform:translateY(-50%)}
 #pk-title{
 font-family:‘Cinzel Decorative’,‘Palatino Linotype’,serif;
 font-weight:700;font-size:clamp(20px,5.5vw,34px);
@@ -101,7 +107,13 @@ height:130vh!important;
 
 <div id="picker">
   <div id="pk-head">
-    <div id="pk-title">Cronin Baseball</div>
+    <div id="pk-diamond">
+      <div class="pb pb-home"></div>
+      <div class="pb pb-first"></div>
+      <div class="pb pb-second"></div>
+      <div class="pb pb-third"></div>
+    </div>
+    <div id="pk-title">The Cronin Baseball</div>
     <div id="pk-sub">Face Every Pitch From Last Night&#39;s Game</div>
   </div>
   <div id="pk-scroll"><div id="pk-grid"></div></div>
